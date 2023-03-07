@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonial</title>
+    <link rel="stylesheet" href="./dist/style.css" />
+  </head>
+  <style>
+    input[type="radio"] {
+      border: none;
+      accent-color: red;
+    }
+  </style>
+  <body>
+    <main>
+      <div class="container">
+        What they’ve said
+
+        <img
+          class="profile"
+          src="./images/avatar-anisha.png"
+          alt="Testmonial profile"
+        />
+        <p class="name">Anisha Li</p>
+        <p class="comment">
+          “Manage has supercharged our team’s workflow. The ability to maintain
+          visibility on larger milestones at all times keeps everyone
+          motivated.”
+        </p>
+        <form>
+          <label hidden for="Anisha">Anisha Li</label>
+          <input type="radio" name="testimonial" id="Anisha" checked />
+          <label hidden for="Ali">Ali Bravo</label>
+          <input type="radio" name="testimonial" id="Ali" />
+          <label hidden for="Richard">Richard Watts</label>
+          <input type="radio" name="testimonial" id="Richard" />
+          <label hidden for="Shanai">Shanai Gough</label>
+          <input type="radio" name="testimonial" id="Shanai" />
+        </form>
+      </div>
+    </main>
+
+    <!-- script -->
+    <script src="./js/testimonial.js"></script>
+  </body>
+</html>
