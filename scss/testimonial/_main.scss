@@ -1,19 +1,25 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-  display: grid;
-  place-content: center;
-}
-
 .container {
+  // position
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  // layout
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+
+  // size
+  margin: 0;
   max-width: 500px;
+  padding: 0;
+  font-size: 14px;
+}
+
+input[type="radio"] {
+  border: none;
+  accent-color: red;
 }

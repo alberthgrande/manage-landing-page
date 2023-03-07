@@ -1,2 +1,8 @@
+@use "../util/fonts" as font;
+@use "../util/colors" as color;
+
 body {
+  font-family: font.$font-family;
+  font-size: font.$font-size;
+  background: color.$vary-light-gray;
 }
