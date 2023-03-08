@@ -96,6 +96,7 @@
 
 .footer-links {
   display: flex;
+
   .footer-list {
     list-style: none;
 
@@ -114,6 +115,9 @@
   }
 
   // responsive
+  @include footer(desktop) {
+    gap: 12.5rem;
+  }
   @include footer(mobile) {
     margin-top: 3.75rem;
     margin-bottom: 3.438rem;
