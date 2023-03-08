@@ -61,3 +61,16 @@
     text-align: center;
   }
 }
+
+.simplify-link {
+  background: color.$vary-light-gray;
+  border-radius: 50px;
+  color: color.$bright-red;
+  display: block;
+  font-size: 12px;
+  margin: 2.813rem 0;
+  padding: 0.7rem;
+  text-decoration: none;
+  text-align: center;
+  width: 120px;
+}

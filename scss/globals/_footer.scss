@@ -21,59 +21,105 @@
     color: hsl(228, 45%, 44%);
   }
 }
-.copyright {
-  color: color.$vary-light-gray;
-}
+
 .footer {
   background: color.$very-dark-blue;
-
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  // position
+  position: relative;
 
+  // responsive
   @include footer(mobile) {
-    height: 540px;
+    height: 33.438rem;
+
+    // display
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
   }
 }
+
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 250px;
   width: 1115px;
+
+  // responsive
+  @include footer(desktop) {
+    margin: 3.75rem 0;
+  }
   @include footer(mobile) {
+    // display
+    display: flex;
     flex-direction: column-reverse;
   }
 }
-.footer-socials {
-  display: flex;
-  gap: 0.8rem;
+
+.footer-logos {
+  .footer-socials {
+    display: flex;
+    gap: 1rem;
+  }
+  .footer-socials img:hover {
+    cursor: pointer;
+    filter: invert(44%) sepia(64%) saturate(764%) hue-rotate(328deg)
+      brightness(96%) contrast(97%);
+  }
+  //responsive
+  @include footer(desktop) {
+    .footer-socials {
+      margin-top: 5.625rem;
+    }
+  }
+
+  @include footer(mobile) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    .footer-logo {
+      margin-top: 3.25rem;
+    }
+    .footer-socials {
+      gap: 2.063rem;
+    }
+    .footer-socials img {
+      height: 2.063rem;
+      width: 2.063rem;
+    }
+  }
 }
+
 .footer-links {
   display: flex;
-  justify-content: space-between;
-  @include footer(desktop) {
-    gap: 220px;
-  }
-}
-.footer-list {
-  list-style: none;
-}
-.footer-list li {
-  margin: 1rem 0;
-}
-.footer-link {
-  font-size: 14px;
-  text-decoration: none;
-  color: color.$vary-light-gray;
-}
+  .footer-list {
+    list-style: none;
 
-.email-form-container {
+    .footer-link {
+      color: color.$vary-light-gray;
+      text-decoration: none;
+    }
+
+    .footer-link:hover {
+      color: color.$bright-red;
+    }
+  }
+
+  .footer-list li {
+    margin: 1rem 0;
+  }
+
+  // responsive
   @include footer(mobile) {
-    margin-top: 3.125rem;
+    margin-top: 3.75rem;
+    margin-bottom: 3.438rem;
   }
 }
-
+// email form input
 input[type="email"] {
   max-width: 240px;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
@@ -92,4 +138,20 @@ input[type="email"] {
 }
 .go:active {
   transform: scale(0.98);
+}
+.go:hover {
+  background: #f98f75;
+}
+
+.copyright {
+  color: color.$vary-light-gray;
+
+  // responsive
+  @include footer(desktop) {
+    margin-top: 5.625rem;
+  }
+  @include footer(mobile) {
+    position: absolute;
+    bottom: 0;
+  }
 }
