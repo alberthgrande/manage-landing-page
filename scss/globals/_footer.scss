@@ -29,6 +29,11 @@
 
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+
+  @include footer(mobile) {
+    height: 540px;
+  }
 }
 .footer-container {
   display: flex;
@@ -54,8 +59,37 @@
 .footer-list {
   list-style: none;
 }
+.footer-list li {
+  margin: 1rem 0;
+}
 .footer-link {
+  font-size: 14px;
   text-decoration: none;
   color: color.$vary-light-gray;
-  margin: 2rem 0;
+}
+
+.email-form-container {
+  @include footer(mobile) {
+    margin-top: 3.125rem;
+  }
+}
+
+input[type="email"] {
+  max-width: 240px;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+}
+.go {
+  background: color.$bright-red;
+  border-radius: 50px;
+  border: none;
+  color: color.$vary-light-gray;
+  cursor: pointer;
+  width: 80px;
+  padding: 0.5rem;
+}
+.go:active {
+  transform: scale(0.98);
 }

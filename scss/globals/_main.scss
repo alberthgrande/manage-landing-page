@@ -8,5 +8,14 @@ body {
 }
 
 .get-started {
+  background: color.$bright-red;
+  border-radius: 50px;
+  color: color.$vary-light-gray;
+  display: block;
+  font-size: 12px;
+  margin: 2.813rem 0;
+  padding: 0.7rem;
   text-decoration: none;
+  text-align: center;
+  width: 120px;
 }
