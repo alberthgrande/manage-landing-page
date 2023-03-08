@@ -29,17 +29,17 @@
     <header>
       <div class="header-container">
         <img src="./images/logo.svg" alt="" />
-        <nav>
-          <ul>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Community</a></li>
+        <nav class="nav-main">
+          <ul class="nav-list">
+            <li><a href="#" class="nav-link">Pricing</a></li>
+            <li><a href="#" class="nav-link">Product</a></li>
+            <li><a href="#" class="nav-link">About Us</a></li>
+            <li><a href="#" class="nav-link">Careers</a></li>
+            <li><a href="#" class="nav-link">Community</a></li>
           </ul>
         </nav>
 
-        <a href="#">Get Started</a>
+        <a href="#" class="get-started">Get Started</a>
       </div>
     </header>
     <main>
@@ -53,7 +53,7 @@
               while keeping the larger team goals in view.
             </p>
 
-            <a href="">Get Started</a>
+            <a href="#" class="get-started">Get Started</a>
           </div>
           <div>
             <img src="./images/illustration-intro.svg" alt="" />
@@ -138,30 +138,64 @@
             </article>
           </div>
 
-          <a href="#"> Get Started</a>
+          <div class="testimonials-mobile">
+            <img
+              class="profile"
+              src="./images/avatar-anisha.png"
+              alt="Testmonial profile"
+            />
+            <p class="name">Anisha Li</p>
+            <p class="comment">
+              “Manage has supercharged our team’s workflow. The ability to
+              maintain visibility on larger milestones at all times keeps
+              everyone motivated.”
+            </p>
+            <form>
+              <label hidden for="Anisha">Anisha Li</label>
+              <input type="radio" name="testimonial" id="Anisha" checked />
+              <label hidden for="Ali">Ali Bravo</label>
+              <input type="radio" name="testimonial" id="Ali" />
+              <label hidden for="Richard">Richard Watts</label>
+              <input type="radio" name="testimonial" id="Richard" />
+              <label hidden for="Shanai">Shanai Gough</label>
+              <input type="radio" name="testimonial" id="Shanai" />
+            </form>
+          </div>
+
+          <a href="#" class="get-started"> Get Started</a>
         </section>
 
         <div class="simplify">
           <h4>Simplify how your team works today.</h4>
 
-          <a href="#">Get Started</a>
+          <a href="#" class="get-started">Get Started</a>
         </div>
       </div>
     </main>
 
-    <footer>
-      <section>
+    <footer class="footer">
+      <section class="footer-container">
         <div>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">About Us</a></li>
+          <img src="./images/logo-footer.svg" alt="Manage Logo" />
+          <div class="footer-socials">
+            <img src="./images/icon-facebook.svg" alt="Facebook icon" />
+            <img src="./images/icon-youtube.svg" alt="Youtube icon" />
+            <img src="./images/icon-twitter.svg" alt="Twitter icon" />
+            <img src="./images/icon-pinterest.svg" alt="Pinterest icon" />
+            <img src="./images/icon-instagram.svg" alt="Instagram icon" />
+          </div>
+        </div>
+        <div class="footer-links">
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">Home</a></li>
+            <li><a href="#" class="footer-link">Pricing</a></li>
+            <li><a href="#" class="footer-link">Products</a></li>
+            <li><a href="#" class="footer-link">About Us</a></li>
           </ul>
-          <ul>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Community</a></li>
-            <li><a href="#"> Privacy Policy</a></li>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">Careers</a></li>
+            <li><a href="#" class="footer-link">Community</a></li>
+            <li><a href="#" class="footer-link"> Privacy Policy</a></li>
           </ul>
         </div>
         <div>
@@ -170,11 +204,12 @@
             <input type="email" placeholder="Updates in your inbox…" />
             <button>Go</button>
           </form>
-          <p>Copyright 2020. All Rights Reserved</p>
+          <p class="copyright">Copyright 2020. All Rights Reserved</p>
         </div>
       </section>
     </footer>
 
+    <script src="./js/testimonial.js"></script>
     <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

@@ -1,7 +1,58 @@
+@use "../util/colors" as color;
+@use "../util/fonts" as font;
+@mixin footer($breakpoint) {
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 48rem) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 48rem) {
+      @content;
+    }
+  }
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
   a {
     color: hsl(228, 45%, 44%);
   }
+}
+.copyright {
+  color: color.$vary-light-gray;
+}
+.footer {
+  background: color.$very-dark-blue;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 250px;
+
+  @include footer(mobile) {
+    flex-direction: column-reverse;
+  }
+}
+.footer-socials {
+  display: flex;
+  gap: 0.8rem;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  @include footer(desktop) {
+    gap: 220px;
+  }
+}
+.footer-list {
+  list-style: none;
+}
+.footer-link {
+  text-decoration: none;
+  color: color.$vary-light-gray;
+  margin: 2rem 0;
 }

@@ -1,4 +1,23 @@
+@mixin grid($breakpoint) {
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 48rem) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 48rem) {
+      @content;
+    }
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @include grid(mobile) {
+    display: flex;
+    flex-direction: column;
+  }
 }

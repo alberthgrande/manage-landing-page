@@ -1,0 +1,29 @@
+@mixin navigation($breakpoint) {
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 48rem) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 48rem) {
+      @content;
+    }
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+
+  list-style: none;
+}
+.nav-link {
+  text-decoration: none;
+}
