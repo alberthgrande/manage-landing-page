@@ -2,7 +2,11 @@
 @use "../util/colors" as color;
 
 body {
+  color: color.$dark-grayish-blue;
   font-family: font.$font-family;
   font-size: font.$font-size;
-  background: color.$vary-light-gray;
+}
+
+.get-started {
+  text-decoration: none;
 }

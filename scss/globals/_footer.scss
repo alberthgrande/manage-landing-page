@@ -26,13 +26,16 @@
 }
 .footer {
   background: color.$very-dark-blue;
+
+  display: flex;
+  justify-content: center;
 }
 .footer-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 250px;
-
+  width: 1115px;
   @include footer(mobile) {
     flex-direction: column-reverse;
   }

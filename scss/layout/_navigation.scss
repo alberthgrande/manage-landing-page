@@ -16,6 +16,17 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @include navigation(mobile) {
+    .first {
+      display: none;
+    }
+  }
+}
+
+.nav-main {
+  @include navigation(mobile) {
+    display: none;
+  }
 }
 
 .nav-list {
@@ -26,4 +37,18 @@
 }
 .nav-link {
   text-decoration: none;
+}
+.btn-mobile-nav {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+
+  .toggle-close {
+    display: none;
+  }
+
+  @include navigation(mobile) {
+    display: block;
+  }
 }
