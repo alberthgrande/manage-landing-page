@@ -15,9 +15,16 @@
   }
 }
 
+.testimonials {
+  display: flex;
+  gap: 2rem;
+}
+
 .testimonials-question {
   margin-top: 80px;
   margin-bottom: 70px;
+
+  color: color.$dark-blue;
 }
 
 .testimonials-mobile {
@@ -66,8 +73,28 @@ input[type="radio"] {
 
 .testimonials-profile {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  background: color.$vary-light-gray;
+
+  height: 220px;
+
+  position: relative;
+
+  .testimonials-name {
+    font-size: font.$font-size;
+    color: color.$dark-blue;
+  }
+}
+
+.testimonials-profile img {
+  display: block;
+  margin: auto;
+  height: auto;
+  width: 75px;
+  position: absolute;
+  inset: -13.5rem 0 0 0;
 }
 
 .testimonials-profile:last-child {
