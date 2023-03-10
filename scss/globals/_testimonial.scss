@@ -73,7 +73,7 @@ input[type="radio"] {
 
 .testimonials-profile {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
   background: color.$vary-light-gray;
@@ -82,9 +82,18 @@ input[type="radio"] {
 
   position: relative;
 
+  .testimonials-content {
+    margin: 1rem;
+  }
+
   .testimonials-name {
     font-size: font.$font-size;
     color: color.$dark-blue;
+    margin: 30px 0 25px;
+  }
+
+  .testimonials-testimony {
+    margin-bottom: 45px;
   }
 }
 
@@ -94,7 +103,7 @@ input[type="radio"] {
   height: auto;
   width: 75px;
   position: absolute;
-  inset: -13.5rem 0 0 0;
+  inset: -14rem 0 0 0;
 }
 
 .testimonials-profile:last-child {

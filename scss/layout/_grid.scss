@@ -1,3 +1,5 @@
+@use "../util/fonts" as font;
+@use "../util/colors" as color;
 @mixin grid($breakpoint) {
   @if $breakpoint == desktop {
     @media only screen and (min-width: 48rem) {
@@ -14,10 +16,60 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
 
+  @include grid(mobile) {
+    :first-child {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.grid-container {
+  max-width: 1115px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   @include grid(mobile) {
     display: flex;
     flex-direction: column;
   }
+}
+
+.main-title,
+.manage-title,
+.manage-article-title {
+  color: color.$dark-blue;
+}
+
+.main-title {
+  font-size: 3rem;
+  line-height: 1.3;
+}
+
+.manage-title {
+  font-size: 2.8rem;
+  line-height: 1.3;
+}
+
+.manage-article {
+  .manage-article-number {
+    background: color.$bright-red;
+    color: color.$vary-light-gray;
+
+    border-radius: 50px;
+    height: 40px;
+    width: 150px;
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+//
+.manage-article {
+  display: flex;
+  gap: 2rem;
 }
