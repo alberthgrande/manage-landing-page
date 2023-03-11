@@ -17,13 +17,6 @@
 .grid {
   display: grid;
   justify-content: center;
-
-  @include grid(mobile) {
-    :first-child {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-  }
 }
 
 .grid-container {
@@ -33,6 +26,20 @@
   @include grid(mobile) {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.grid-container:first-child {
+  @include grid(mobile) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 1.5rem;
+    .main-title {
+      font-size: 2.3rem;
+    }
   }
 }
 

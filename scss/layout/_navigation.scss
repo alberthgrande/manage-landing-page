@@ -1,11 +1,14 @@
+@use "../util/colors" as color;
+@use "../util/fonts" as font;
+
 @mixin navigation($breakpoint) {
-  @if $breakpoint == desktop {
+  @if $breakpoint ==desktop {
     @media only screen and (min-width: 48rem) {
       @content;
     }
   }
 
-  @if $breakpoint == mobile {
+  @if $breakpoint ==mobile {
     @media only screen and (max-width: 48rem) {
       @content;
     }
@@ -16,8 +19,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+
   @include navigation(mobile) {
     justify-content: space-between;
+    padding: 2.5rem 1.563rem;
+
     .first {
       display: none;
     }
@@ -36,9 +42,18 @@
 
   list-style: none;
 }
+
 .nav-link {
+  color: color.$dark-blue;
+  font-weight: font.$fw-500;
   text-decoration: none;
 }
+
+.nav-link:hover {
+  color: color.$dark-grayish-blue;
+
+}
+
 .btn-mobile-nav {
   background: none;
   border: none;
