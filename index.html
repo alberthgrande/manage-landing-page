@@ -40,16 +40,17 @@
       </button>
     </div>
   </header>
+
   <main>
     <div class="main-container">
       <section class="grid">
-        <div class="grid-container flex-reverse">
-          <div>
-            <h1 class="main-title">
+        <div class="grid-top">
+          <div class="grid-top-content">
+            <h1 class="grid-top-content__title">
               Bring everyone together to build better products.
             </h1>
 
-            <p>
+            <p class="grid-top-content__text">
               Manage makes it simple for software teams to plan day-to-day
               tasks while keeping the larger team goals in view.
             </p>
@@ -63,11 +64,11 @@
       </section>
 
       <sectio class="grid">
-        <div class="grid-container">
-          <div>
-            <h2 class="manage-title">What’s different about Manage?</h2>
+        <div class="grid-mid">
+          <div class="grid-mid-content">
+            <h2 class="grid-mid-content__title">What’s different about Manage?</h2>
 
-            <p>
+            <p class="grid-mid-content__text">
               Manage provides all the functionality your team needs, without
               the complexity. Our software is tailor-made for modern digital
               product teams.
@@ -80,7 +81,7 @@
                 <h3 class="manage-article-title">
                   Track company-wide progress
                 </h3>
-                <p>
+                <p class="manage-article-text">
                   See how your day-to-day tasks fit into the wider vision. Go
                   from tracking progress at the milestone level all the way
                   done to the smallest of details. Never lose sight of the
@@ -95,7 +96,7 @@
                 <h3 class="manage-article-title">
                   Advanced built-in reports
                 </h3>
-                <p>
+                <p class="manage-article-text">
                   Set internal delivery estimates and track progress toward
                   company goals. Our customisable dashboard helps you build
                   out the reports you need to keep key stakeholders informed.
@@ -109,7 +110,7 @@
                 <h3 class="manage-article-title">
                   Everything you need in one place
                 </h3>
-                <p>
+                <p class="manage-article-text">
                   Stop jumping from one service to another to communicate,
                   store files, track tasks and share documents. Manage offers
                   an all-in-one team productivity solution.
@@ -120,6 +121,7 @@
         </div>
       </sectio>
 
+      <!-- need to fix the layout design -->
       <section class="flex">
         <h2 class="testimonials-question">What they’ve said</h2>
 
@@ -247,6 +249,7 @@
   <!-- overlay -->
   <div class="overlay hidden"></div>
   <script src="./js/testimonial.js"></script>
+  <script src="./js/toggle.js"></script>
   <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

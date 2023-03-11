@@ -1,18 +1,20 @@
 @use "../util/colors" as color;
 @use "../util/fonts" as font;
+
 @mixin flex($breakpoint) {
-  @if $breakpoint == desktop {
+  @if $breakpoint ==desktop {
     @media only screen and (min-width: 48rem) {
       @content;
     }
   }
 
-  @if $breakpoint == mobile {
+  @if $breakpoint ==mobile {
     @media only screen and (max-width: 48rem) {
       @content;
     }
   }
 }
+
 .flex {
   display: flex;
   align-items: center;
@@ -30,17 +32,25 @@
 
 .testimonials-mobile {
   display: none;
+
   @include flex(mobile) {
     display: block;
   }
 }
 
 .simplify {
-  background: color.$bright-red;
+  background: {
+    color: color.$bright-red;
+    image: url(../images/bg-simplify-section-desktop.svg)
+  }
+
   height: 220px;
   display: flex;
   align-items: center;
+
+
 }
+
 .simplify-container {
   width: 1115px;
   margin: auto;
