@@ -21,7 +21,6 @@
   justify-content: center;
 }
 
-
 // grid-top
 .grid-top {
   display: grid;
@@ -52,7 +51,6 @@
         max-width: unset;
         text-align: center;
       }
-
     }
 
     @include grid(mobile) {
@@ -75,8 +73,8 @@
 .grid-mid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
   max-width: 71.875rem;
-
 
   @include grid(mobile) {
     display: flex;
@@ -123,45 +121,49 @@
   }
 }
 
-// manage-article
-.manage-article {
+// manage
+.manage {
+  &-article {
+    display: flex;
+    flex-direction: column;
+  }
 
-  display: flex;
-  gap: 2rem;
+  &-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @include grid(mobile) {
+      background: hsl(15, 100, 96, 100%);
+      gap: 1rem;
+      margin-left: 1rem;
+    }
+  }
 
   &-number {
     background: color.$bright-red;
-    border-radius: 3.125rem;
+    border-radius: 50px;
     color: color.$vary-light-gray;
-    height: fit-content;
-    padding: 0.5rem;
+    width: 70px;
+    padding: 0.4rem;
     text-align: center;
-    width: 12.5rem;
-
-    @include grid(mobile) {
-      position: relative;
-      left: 1rem;
-    }
   }
 
   &-title {
     color: color.$dark-blue;
     font-size: font.$font-size;
-    padding: 0.5rem;
-
-    @include grid(mobile) {
-      background: color.$very-pale-red;
-      text-align: center;
-    }
   }
 
   &-text {
-    margin-top: 1rem;
-  }
-
-
-  @include grid(mobile) {
-    display: flex;
-    margin-bottom: 3.125rem;
+    @include grid(desktop) {
+      margin-top: 10px;
+      margin-left: 6.4rem;
+      margin-bottom: 25px;
+    }
+    @include grid(mobile) {
+      margin-top: 10px;
+      margin-left: 1rem;
+      margin-bottom: 55px;
+    }
   }
 }
