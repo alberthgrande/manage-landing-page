@@ -15,18 +15,47 @@
   }
 }
 
+.testimonials-question {
+  color: color.$dark-blue;
+  font-size: 2rem;
+  margin-top: 80px;
+  margin-bottom: 70px;
+}
+
 .testimonials {
   display: flex;
   gap: 2rem;
+  margin-top: 50px;
 }
 
-.testimonials-question {
-  margin-top: 80px;
-  margin-bottom: 70px;
+.testimonials-profile {
+  background: color.$vary-light-gray;
+  padding: 2rem;
+}
 
+.testimonials-profile img {
+  display: block;
+  margin: auto;
+  height: auto;
+  width: 70px;
+  position: relative;
+  transform: translateY(-100%);
+}
+.testimonials-profile:last-child {
+  display: none;
+}
+
+.testimonials-name {
   color: color.$dark-blue;
+  font-size: 1rem;
+  margin-top: -45px;
+  margin-bottom: 25px;
+}
+.testimonials-testimony {
+  font-size: 1rem;
 }
 
+// .testimonials-mobile
 .testimonials-mobile {
   display: flex;
   flex-direction: column;
@@ -57,6 +86,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .profile {
@@ -66,46 +96,40 @@
   top: -2.5rem;
 }
 
-input[type="radio"] {
-  border: none;
-  accent-color: red;
-}
-
-.testimonials-profile {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-  background: color.$vary-light-gray;
-
-  height: 220px;
-
-  position: relative;
-
-  .testimonials-content {
-    margin: 1rem;
-  }
-
-  .testimonials-name {
-    font-size: font.$font-size;
-    color: color.$dark-blue;
-    margin: 30px 0 25px;
-  }
-
-  .testimonials-testimony {
-    margin-bottom: 45px;
-  }
-}
-
-.testimonials-profile img {
+// radio button
+.container-radio {
   display: block;
-  margin: auto;
-  height: auto;
-  width: 75px;
-  position: absolute;
-  inset: -14rem 0 0 0;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-
-.testimonials-profile:last-child {
-  display: none;
+/* Hide the browser's default radio button */
+.container-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+/* On mouse-over, add a grey background color */
+.container-radio input ~ .checkmark {
+  background-color: #ccc;
+}
+/* When the radio button is checked, add a blue background */
+.container-radio input:checked ~ .checkmark {
+  background: color.$bright-red;
 }
