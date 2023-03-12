@@ -1,13 +1,14 @@
 @use "../util/colors" as color;
 @use "../util/fonts" as font;
+
 @mixin footer($breakpoint) {
-  @if $breakpoint == desktop {
+  @if $breakpoint ==desktop {
     @media only screen and (min-width: 48rem) {
       @content;
     }
   }
 
-  @if $breakpoint == mobile {
+  @if $breakpoint ==mobile {
     @media only screen and (max-width: 48rem) {
       @content;
     }
@@ -17,6 +18,7 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+
   a {
     color: hsl(228, 45%, 44%);
   }
@@ -51,6 +53,7 @@
   @include footer(desktop) {
     margin: 3.75rem 0;
   }
+
   @include footer(mobile) {
     // display
     display: flex;
@@ -63,11 +66,12 @@
     display: flex;
     gap: 1rem;
   }
+
   .footer-socials img:hover {
     cursor: pointer;
-    filter: invert(44%) sepia(64%) saturate(764%) hue-rotate(328deg)
-      brightness(96%) contrast(97%);
+    filter: invert(44%) sepia(64%) saturate(764%) hue-rotate(328deg) brightness(96%) contrast(97%);
   }
+
   //responsive
   @include footer(desktop) {
     .footer-socials {
@@ -84,9 +88,11 @@
     .footer-logo {
       margin-top: 3.25rem;
     }
+
     .footer-socials {
       gap: 2.063rem;
     }
+
     .footer-socials img {
       height: 2.063rem;
       width: 2.063rem;
@@ -118,19 +124,27 @@
   @include footer(desktop) {
     gap: 12.5rem;
   }
+
   @include footer(mobile) {
     margin-top: 3.75rem;
     margin-bottom: 3.438rem;
   }
 }
+
 // email form input
 input[type="email"] {
+  border-radius: 50px;
+  border: none;
   max-width: 240px;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
-  border-radius: 50px;
   outline: none;
-  border: none;
 }
+
+input[type="email"].success {
+  outline: 1px solid hsl(133.7deg 61.35% 40.59%);
+}
+
+
 .go {
   background: color.$bright-red;
   border-radius: 50px;
@@ -140,9 +154,11 @@ input[type="email"] {
   width: 80px;
   padding: 0.5rem;
 }
+
 .go:active {
   transform: scale(0.98);
 }
+
 .go:hover {
   background: #f98f75;
 }
@@ -154,6 +170,7 @@ input[type="email"] {
   @include footer(desktop) {
     margin-top: 5.625rem;
   }
+
   @include footer(mobile) {
     position: absolute;
     bottom: 0;

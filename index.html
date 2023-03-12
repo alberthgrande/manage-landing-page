@@ -238,8 +238,9 @@
       <div class="email-form-container">
         <form class="email-form">
           <label for="email" hidden>Email</label>
-          <input type="email" placeholder="Updates in your inbox…" />
-          <button class="go">Go</button>
+          <input type="email" id="email" placeholder="Updates in your inbox…" />
+          <button type="button" class="go">Go</button>
+          <p class="email-error-message"></p>
         </form>
         <p class="copyright">Copyright 2020. All Rights Reserved</p>
       </div>
@@ -248,8 +249,9 @@
 
   <!-- overlay -->
   <div class="overlay hidden"></div>
-  <script src="./js/testimonial.js"></script>
-  <script src="./js/toggle.js"></script>
+  <script defer src="./js/email-validation.js"></script>
+  <script defer src="./js/testimonial.js"></script>
+  <script defer src="./js/toggle.js"></script>
   <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

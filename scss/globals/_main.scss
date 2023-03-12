@@ -38,6 +38,19 @@ body {
   }
 }
 
+// email-error-message
+.email-error-message {
+  display: none;
+  outline: none;
+}
+
+
+.email-error-message.error {
+  color: tomato;
+  font-style: italic;
+  font-size: 14px;
+}
+
 .hidden {
   display: none;
 }
