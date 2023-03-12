@@ -135,6 +135,8 @@
 
     @include grid(mobile) {
       background: hsl(15, 100, 96, 100%);
+      border-radius: 50px 0 0 50px;
+
       gap: 1rem;
       margin-left: 1rem;
     }
