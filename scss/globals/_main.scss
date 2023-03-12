@@ -24,9 +24,11 @@ body {
 .get-started {
   background: color.$bright-red;
   border-radius: 50px;
+  box-shadow: 0px 10px 15px 0px rgba(243, 97, 60, 30%);
   color: color.$vary-light-gray;
   display: block;
   font-size: 12px;
+  font-weight: font.$fw-500;
   margin: 2.813rem 0;
   padding: 0.7rem;
   text-decoration: none;
@@ -37,13 +39,15 @@ body {
     margin: 1.813rem auto;
   }
 }
+.get-started:hover {
+  background: #f98f75;
+}
 
 // email-error-message
 .email-error-message {
   display: none;
   outline: none;
 }
-
 
 .email-error-message.error {
   color: tomato;

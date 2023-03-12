@@ -41,14 +41,12 @@
 .simplify {
   background: {
     color: color.$bright-red;
-    image: url(../images/bg-simplify-section-desktop.svg)
+    image: url(../images/bg-simplify-section-desktop.svg);
   }
 
   height: 220px;
   display: flex;
   align-items: center;
-
-
 }
 
 .simplify-container {
@@ -78,9 +76,16 @@
   color: color.$bright-red;
   display: block;
   font-size: 12px;
+  font-weight: font.$fw-500;
   margin: 2.813rem 0;
   padding: 0.7rem;
   text-decoration: none;
   text-align: center;
   width: 120px;
+}
+
+.simplify-link:hover {
+  background: color.$vary-light-gray;
+  color: #f98f75;
+  font-weight: font.$fw-500;
 }
